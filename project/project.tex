@@ -1,0 +1,469 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tgtermes}
+\usepackage{mathptmx}
+\usepackage[english]{babel}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage{setspace}
+\doublespacing
+
+\setlength{\marginparwidth}{2cm}
+\setcounter{secnumdepth}{2}
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+
+\title{\textbf{Bank of China's ``Crude Oil Treasure'' Incident: \\
+A Risk Management Case Study}}
+\author{Ng Tze Kean}
+\date{Mar 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+In April 2020, international crude oil markets experienced an
+unprecedented shock when the West Texas Intermediate (WTI) futures
+contract for May delivery settled at a deeply negative price of
+approximately $-$37.63 USD per barrel. This event, the first time in
+history that U.S. crude oil futures had traded below zero, exposed
+vulnerabilities across global commodity markets and brought to light
+a particularly striking case of institutional risk management failure
+at the Bank of China (BoC). The bank's retail investment product
+known as ``Crude Oil Treasure'' (Yuan You Bao), which was linked to
+WTI and Brent crude futures, became the focal point of an incident
+that resulted in estimated losses of 7 to 10 billion yuan, affecting
+approximately 60,000 retail investors and triggering significant
+regulatory sanctions against the bank \cite{caixin2020stops}.
+
+This report examines the Bank of China Crude Oil Treasure incident
+through the lens of bank risk management. The analysis proceeds in
+several stages. First, it provides the background context of the
+April 2020 oil price crash, explaining the confluence of factors that
+drove WTI prices into negative territory. Second, it describes the
+product structure and mechanics of Crude Oil Treasure and explains
+how both retail clients and the bank itself suffered financial
+losses. Third, it analyses the specific risk exposures involved,
+including market risk, liquidity risk, credit risk, and operational
+risk, with reference to BoC's balance sheet position. Fourth, it
+discusses how the bank might have avoided or mitigated the failure
+with the benefit of hindsight, drawing on comparisons with peer
+institutions and post-crisis regulatory guidance. The report
+concludes with reflections on the broader lessons for commercial bank
+risk management.
+
+\section{Background: The April 2020 Oil Price Crash}
+
+The collapse of WTI crude oil futures to negative prices on 20 April
+2020 was the product of an extraordinary convergence of
+macroeconomic, geopolitical, and market-structural forces. Beginning
+in early 2020, the rapid global spread of the Covid-19 pandemic
+caused an unprecedented contraction in oil demand, particularly from
+the transportation and industrial sectors that together account for
+the majority of global crude consumption. Simultaneously, a price war
+between Saudi Arabia and Russia in March 2020 led major producers to
+maintain or increase output at a time when demand was falling
+sharply, resulting in a massive and growing surplus of crude oil
+worldwide \cite{atlantis2022casestudy}.
+
+The physical infrastructure of the oil market proved unable to absorb
+this surplus. Storage capacity at Cushing, Oklahoma---the delivery
+point for WTI futures contracts---filled rapidly, reaching more than
+70 to 75 percent of working capacity by mid-April, with much of the
+remaining capacity already committed under long-term contracts. This
+was a critical development because WTI futures are physically settled
+instruments: a long holder at expiry must accept delivery of 1,000
+barrels per contract, and if storage is unavailable, the holder has
+no way to fulfil this obligation without finding a counterparty
+willing to take on the physical commodity \cite{wharton2024benchmarks}.
+
+The Chicago Mercantile Exchange (CME) had recognized the emerging
+risk. On 15 April 2020, the CME explicitly warned market participants
+that energy futures, including WTI, could trade at or below zero due
+to the scarcity and cost of storage, and it updated its systems to
+accommodate negative pricing. However, many market participants and
+intermediaries did not fully internalise this warning or update their
+own systems accordingly \cite{cgtn2020fined}.
+
+On 20 April 2020, with the May WTI contract entering its final
+trading day, the market dynamics became acutely one-sided. Financial
+and retail long holders who could not handle physical delivery
+scrambled to exit their positions, but the pool of willing buyers was
+severely constrained because storage and logistical capacity at
+Cushing was nearly exhausted. As the trading session progressed,
+selling pressure intensified while depth in the order book thinned
+dramatically. At approximately 2:08 p.m. New York time, WTI futures
+broke through zero for the first time in history, and the contract
+eventually settled near $-$37.63 USD per barrel. In effect, sellers
+were paying buyers to assume the contractual obligation to accept oil
+that the sellers themselves could not store \cite{atlantis2021fmet}.
+
+Academic and policy analyses have concluded that the negative
+settlement price was primarily driven by binding storage constraints
+at Cushing, amplified by a large open interest held by financial
+traders and funds that were structurally unable to accept physical
+delivery and thus became forced sellers into a severely illiquid
+market \cite{wharton2024benchmarks}.
+
+\section{The Crude Oil Treasure Product}
+
+\subsection{Product Structure and Design}
+
+``Crude Oil Treasure'' (Yuan You Bao) was launched by Bank of China
+in January 2018 as a wealth-management product designed for mainland
+Chinese retail investors, providing them with synthetic exposure to
+international crude oil markets through domestic and foreign futures
+contracts, primarily WTI and Brent. The product was structured so
+that customers paid 100 percent cash margin to BoC, which then
+established offsetting positions in overseas crude oil futures on its
+own account. Investors were credited or debited daily profit and loss
+based on changes in futures prices, without any obligation to take or
+make physical delivery of oil \cite{drpress2023icbc}.
+
+The product was registered and marketed as a medium-risk (R3)
+wealth-management product. Marketing materials emphasised that the
+product required 100 percent margin and involved ``no leverage,''
+creating the impression among many investors that their maximum
+possible loss was limited to their initial principal investment.
+However, the contractual terms and the underlying futures replication
+meant that losses could theoretically exceed deposits if the
+referenced futures contract settled at deeply negative prices---a
+scenario that, prior to April 2020, had never occurred and was not
+contemplated in the product's risk disclosures \cite{drpress2023icbc}.
+
+\subsection{How Clients Lost Money}
+
+Bank of China had scheduled the rollover and settlement of its
+WTI-linked Crude Oil Treasure positions to take place on the last
+trading day of the May contract, which fell on 20 April 2020 U.S.
+time. Unlike several peer Chinese banks---notably Industrial and
+Commercial Bank of China (ICBC) and China Construction Bank (CCB),
+which had rolled their similar paper-crude products to the June
+contract several days before expiry---BoC held its positions until
+the final trading session, directly exposing its clients to the
+historic negative settlement price \cite{atlantis2022casestudy}.
+
+The consequences for investors were devastating. Approximately 60,000
+retail clients had collectively deposited around 4.2 billion yuan in
+margin. When their positions were settled at the negative WTI price,
+not only did they lose the entirety of their margin, but they also
+collectively owed an additional 5.8 billion yuan to the bank,
+implying total client losses of approximately 10 billion yuan. Many
+investors found themselves with deeply negative account balances,
+meaning that the bank considered them to owe money beyond what they
+had originally invested \cite{argus2020fined}.
+
+Compounding the problem, BoC's trading rules stipulated that retail
+positions would be auto-liquidated if margin fell below 20 percent of
+the notional exposure. However, the bank's risk and trading systems
+had not been designed to handle negative futures prices. As a result,
+the auto-liquidation mechanism failed to trigger as the price fell
+through zero, allowing client losses to accumulate far beyond the
+margin threshold and turning many accounts deeply negative. This
+system failure was a direct contributor to the severity of the
+losses, as an operational auto-close at zero or any small positive
+price would have significantly limited client exposure
+\cite{atlantis2022casestudy}.
+
+\subsection{How the Bank Lost Money}
+
+Bank of China's own financial exposure to the incident was
+significant, though distinct from the client losses. Economically,
+Crude Oil Treasure was structured as an off-balance-sheet derivatives
+business in which BoC transformed retail deposits into margin
+collateral for its own futures positions, passing market profit and
+loss through to customers while retaining execution and counterparty
+risk on its own books \cite{bloomberg2020losses}.
+
+Once the settlement produced deeply negative client account balances,
+these balances became unsecured credit exposures from the bank to
+tens of thousands of retail customers. If those customers refused or
+were unable to pay---and many did refuse, on the grounds that the
+product had been mis-sold and the auto-liquidation system had
+failed---the bank would be forced to absorb the shortfall as a
+trading loss that would crystallise on its balance sheet as a credit
+loss, accompanied by severe reputational damage \cite{bloomberg2020losses}.
+
+Under intense regulatory and political pressure, BoC ultimately
+offered most small investors compensation of up to 20 percent of
+their original investment, capped at 10 million yuan per client. This
+compensation plan was estimated to cost the bank approximately 6 to
+6.5 billion yuan, on top of its own hedging and operational losses
+\cite{caixin2020mulls}. The China Banking and Insurance Regulatory
+Commission (CBIRC) additionally fined the bank 50.5 million yuan,
+sanctioned responsible managers, and suspended certain related
+business lines \cite{reuters2020fined}.
+
+\section{Risk Exposure Analysis}
+
+\subsection{Market and Price-Gap Risk}
+
+The primary risk that materialised in the Crude Oil Treasure incident
+was extreme market risk. The collapse of WTI from positive territory
+to $-$37.63 USD within a single trading session was far beyond any
+historical precedent, yet BoC's stress tests and risk limits appear
+not to have contemplated negative-price scenarios. Academic analyses
+of the incident argue that the product's design failed to fully
+reflect the characteristics of futures contracts, including
+convergence to spot price near expiry and the risk of severe price
+dislocations when liquidity dries up in physically-settled markets
+\cite{oilprice2020fine}.
+
+From a commercial-banking perspective, this represents a classic
+trading-book market-risk failure. The bank's risk limits and stress
+scenarios were anchored on historical volatility rather than
+tail-risk events, and its decision to roll and settle positions on
+the most illiquid day of the contract cycle maximised exposure to
+intraday price gaps. Because BoC's hedge positions in futures
+mirrored client exposures, any unhedged gap or execution slippage
+around the rollover directly translated into profit-and-loss impacts
+for the bank and ultimately consumed its capital \cite{atlantis2021analysis}.
+
+\subsection{Liquidity Risk}
+
+The incident exposed two distinct dimensions of liquidity risk. The
+first was market liquidity risk: near expiry, the May WTI order book
+thinned dramatically as storage constraints at Cushing limited the
+number of willing buyers, leading to violent price swings and periods
+where large positions simply could not be unwound at reasonable
+prices. Research on the Crude Oil Treasure case highlights that
+time-zone differences between Chinese retail trading hours and the
+CME market, combined with BoC's suspension of new WTI-linked trading
+on 21 April, further impaired the bank's flexibility in managing its
+positions and executing orderly liquidation \cite{atlantis2021fmet}.
+
+The second dimension was funding liquidity risk. As WTI prices moved
+sharply against BoC's hedging futures positions, the bank would have
+faced substantial intraday margin calls from its clearing brokers.
+These calls had to be met from the bank's own liquidity buffers or
+wholesale funding channels, creating a sudden and large cash-flow
+demand on the bank's treasury. While BoC's overall liquidity position
+remained adequate given its scale, the episode demonstrated how a
+retail derivatives product can unexpectedly generate significant
+funding stress, competing with core lending and payment obligations
+on the liability side of the balance sheet \cite{joebm2024analysis}.
+
+To place these liquidity demands in the context of BoC's balance
+sheet, it is instructive to consider the bank's financial position at
+year-end 2020. Bank of China's total assets stood at approximately
+24.40 trillion yuan, with equity attributable to shareholders of
+roughly 2.04 trillion yuan, implying a balance-sheet leverage ratio
+of approximately 12 times---typical for a large commercial bank. The
+bank's capital adequacy ratio remained above regulatory minimums.
+Even assuming total net losses from the Crude Oil Treasure incident
+of 7 to 9 billion yuan including compensation costs, this represents
+less than 0.5 percent of shareholder equity, which did not threaten
+solvency \cite{atlantis2021analysis}. However, it did consume
+economic capital and raised serious questions about the risk-return
+trade-off of engaging in non-core trading activities on an already
+leveraged commercial-banking balance sheet. The incident illustrates
+how even small mis-priced derivative businesses, when distributed
+across tens of thousands of retail clients, can generate material
+profit-and-loss volatility and capital consumption that is
+disproportionate to the fee income they generate.
+
+\subsection{Credit and Counterparty Risk}
+
+The settlement at negative prices transformed what had been marketed
+as a fully-margined investment product into an unsecured retail
+credit exposure for the bank. According to reporting by Caixin,
+clients had deposited about 4.2 billion yuan of margin but, after
+settlement, collectively owed an additional 5.8 billion yuan, an
+amount that many were unwilling or unable to pay. BoC initially
+asserted its contractual rights to claim these negative balances, but
+faced both legal challenges from investors and political pressure
+from regulators, so much of this exposure effectively became
+non-performing or disputed retail credit claims \cite{caixin2020exclusive}.
+
+From a credit-risk management perspective, BoC had effectively
+extended unsecured credit lines to tens of thousands of retail
+clients without recognising or treating them as such within its
+credit portfolio. Because the product was marketed as fully margined
+and was not framed internally as a lending exposure, it was not
+subject to the credit underwriting standards, concentration limits,
+or provisioning requirements that would ordinarily apply to retail
+lending. Regulators subsequently instructed banks to cease selling
+wealth-management products that could expose investors to unlimited
+losses, recognising that such structures blur the boundary between
+investment and leveraged speculation and can create unrecognised
+retail credit risk for the sponsoring bank \cite{reuters2020fined}.
+
+\subsection{Operational, Model, and Conduct Risk}
+
+The CBIRC investigation concluded that BoC had exhibited ``irregular
+product management,'' including unclear contract terms regarding
+margin mechanisms and a failure to rectify known defects in trading
+system functions, particularly the inability of the auto-liquidation
+system to handle negative prices. These deficiencies constitute
+operational and model risk: critical systems embedded faulty
+assumptions---specifically, that prices could not be negative---and
+governance structures failed to ensure that information technology,
+legal, and risk functions updated their models and documentation
+after the CME signalled the possibility of negative pricing on 15
+April 2020 \cite{cgtn2020fined}.
+
+The regulator also found that BoC's internal controls on
+consumer-rights protection and sales management were inadequate.
+Promotional materials were in some cases exaggerated and did not
+clearly explain that investors could lose more than their principal,
+despite the R3 ``moderate risk'' classification. This represents a
+conduct-risk failure with direct commercial-banking implications:
+mis-selling to retail clients damages franchise value and can force
+the bank, under regulatory or political pressure, to absorb losses
+that are legally the customer's responsibility, thereby converting
+operational and reputational risk into real capital costs
+\cite{caixin2020probe}.
+
+\section{Hindsight: How Bank of China Could Have Avoided the Failure}
+
+With the benefit of hindsight, several concrete measures could have
+prevented or substantially mitigated the Crude Oil Treasure disaster.
+These span product design, operational systems, rollover policy, and
+risk governance.
+
+\subsection{Adopting an Earlier Rollover Schedule}
+
+Perhaps the single most consequential decision was BoC's choice to
+schedule its contract rollover on the last trading day of the May WTI
+futures. By contrast, ICBC and CCB rolled their equivalent
+paper-crude products to the June contract several days before the May
+expiry, thereby avoiding settlement at the extreme negative price
+entirely. Had BoC adopted a similar conservative rollover
+policy---settling positions at least five to seven business days
+before the expiry date---its clients' positions would have been
+closed at prices that, while low, were still well within positive
+territory. Academic analysis of the incident has identified the late
+rollover timing as the single largest controllable factor in the
+scale of losses, noting that early rollover is standard practice
+among institutional market participants precisely because liquidity
+deteriorates sharply in the final days before physical-delivery
+expiry \cite{drpress2023icbc}. Regulatory commentary from the CBIRC
+also pointed to the rollover timing as a key deficiency in BoC's risk
+management framework \cite{caixin2020probe}.
+
+\subsection{Updating Systems for Negative Prices}
+
+The CME issued an advisory on 15 April 2020---five days before the
+crash---explicitly warning that energy futures could trade at or
+below zero and that market participants should prepare their systems
+accordingly. BoC's trading and risk management systems were not
+updated to handle negative prices, which caused the auto-liquidation
+mechanism to fail. Had the bank responded promptly to the CME
+advisory by modifying its systems to accommodate negative pricing and
+by activating the 20 percent margin auto-close provision at or near
+zero, client losses would have been limited to their margin deposits
+rather than extending into deeply negative territory
+\cite{cgtn2020fined}. This failure illustrates the importance of
+maintaining adaptive operational infrastructure and of treating
+exchange-level advisories as urgent triggers for system review,
+particularly when they signal the possibility of fundamentally novel
+market conditions.
+
+\subsection{Strengthening Product Design and Risk Classification}
+
+The classification of Crude Oil Treasure as an R3 medium-risk product
+was fundamentally at odds with its actual payoff profile, which
+replicated a futures contract with theoretically unlimited downside.
+A more rigorous new-product approval process, with independent review
+by risk, legal, and compliance functions, should have identified this
+mismatch before the product was launched. Specifically, the product
+should either have been reclassified to a higher risk tier with
+correspondingly stricter investor suitability requirements, or it
+should have incorporated explicit loss-limiting features such as a
+contractual floor at zero (so that client losses could never exceed
+the margin deposited) or mandatory stop-loss triggers at specified
+threshold levels \cite{scmp2020billion}. As the Harvard Business
+School case study on the incident notes, the structural mismatch
+between what the product's risk label communicated and what its
+contractual terms actually permitted was a root cause of both the
+mis-selling and the scale of the eventual losses \cite{hbs2020structured}.
+
+\subsection{Implementing Robust Stress Testing}
+
+BoC's stress-testing framework for the Crude Oil Treasure product
+evidently did not contemplate the possibility of negative oil prices.
+Even before the April 2020 event, the academic literature on
+commodity markets had noted that physical-delivery futures could
+theoretically settle at negative values when storage is scarce and
+costly. A more robust stress-testing regime---one that incorporated
+extreme but plausible scenarios including negative settlement prices,
+sudden storage capacity exhaustion, and complete evaporation of
+market liquidity near expiry---would have revealed the product's
+vulnerability to tail-risk events. Such analysis might have prompted
+the bank to hedge against extreme downside scenarios, to establish
+stricter position limits, or to revise the product's contractual
+terms \cite{atlantis2021fmet}. Peer institutions' experience
+demonstrates that even simple heuristic risk controls, such as
+mandatory early rollover rules, can serve as effective
+circuit-breakers against tail-risk materialisation.
+
+\subsection{Improving Investor Suitability and Disclosure}
+
+Finally, the conduct and suitability failings identified by the CBIRC
+could have been addressed through clearer and more conservative
+investor disclosures. If marketing materials had explicitly stated
+that losses could exceed 100 percent of principal under extreme
+market conditions, and if the investor qualification process had
+restricted access to the product to clients with demonstrated
+understanding of derivatives risk, both the number of affected
+investors and the intensity of the subsequent regulatory and
+reputational fallout would likely have been reduced
+\cite{caixin2020bitter}. Post-crisis regulatory guidance has since
+mandated these kinds of enhanced disclosures for derivative-linked
+wealth-management products, reflecting the lessons of the Crude Oil
+Treasure episode \cite{reuters2020fined}.
+
+\section{Conclusion}
+
+The Bank of China Crude Oil Treasure incident stands as a cautionary
+example of how failures in product design, risk management,
+operational systems, and investor protection can converge to produce
+outsized losses in a commercial-banking setting. The April 2020
+collapse of WTI oil prices to negative territory was an extreme and
+unprecedented market event, but its impact on BoC and its clients was
+magnified by a series of avoidable decisions: a late rollover
+schedule that maximised exposure to illiquid end-of-contract trading,
+systems that could not accommodate negative prices, a risk
+classification that understated the product's true downside, and
+disclosures that left retail investors unaware of their potential for
+losses beyond their principal.
+
+The incident consumed an estimated 7 to 9 billion yuan of economic
+value, imposed regulatory sanctions and reputational damage on the
+bank, and prompted a comprehensive tightening of regulatory standards
+for derivative-linked wealth-management products in China. While the
+losses represented less than 0.5 percent of Bank of China's
+shareholder equity and did not threaten the bank's solvency, they
+demonstrated that on a leveraged commercial-banking balance sheet,
+even seemingly small non-core trading activities can generate
+material capital consumption and profit-and-loss volatility that is
+disproportionate to the fee income they produce.
+
+For bank managers, the central lesson is that any product whose
+economics replicate those of a futures or options contract must be
+governed with the same rigour as a derivatives business, regardless
+of how it is labelled or marketed. This requires robust stress
+testing that contemplates extreme scenarios, adaptive operational
+systems that can respond to changing market conditions, conservative
+rollover and liquidity management policies, honest risk
+classification, and clear investor disclosures. The Crude Oil
+Treasure incident shows that when these safeguards are absent, the
+consequences can be severe---not only for the bank's clients, but for
+the institution's balance sheet, reputation, and regulatory standing.
+
+\newpage
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
